@@ -31,8 +31,11 @@ _**Little_Buttler** Is an assitent for Personal Asstents LLC.* . Track the litte
 
 ## MVP
 
-_The **Little_Butler** MVP be able to authenticat and allow the employees to log in 
+_The **Little_Butler** MVP 
+allow the employees to log in 
 create new clients
+add notes to client files
+update client information
 
 <br>
 
@@ -62,27 +65,17 @@ create new clients
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+- Mobile Landing
 
-- Desktop Landing
-
-![Dummy Link](url)
+![[Dummy Link](url)](https://www.figma.com/file/Dx9qXzs4p3U4qjLfG3iIFX/Untitled?node-id=3%3A25)
 
 - Desktop Hero
 
-![Dummy Link](url)
-
 - Resource Index
 
-![Dummy Link](url)
-
 - Resource Show
-
-![Dummy Link](url)
-
+  
 - Tablet Resource Index
-
-![Dummy Link](url)
 
 - Mobile Resource Index
 
@@ -148,3 +141,12 @@ src
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution.
+
+
+
+
+
+
+
+creating new client form(img url?)
+addrees of client on client creant. fuul
