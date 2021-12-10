@@ -67,7 +67,7 @@ update client information
 
 - Mobile Landing
 
-![[Dummy Link](url)](https://www.figma.com/file/Dx9qXzs4p3U4qjLfG3iIFX/Untitled?node-id=3%3A25)
+https://www.figma.com/file/Dx9qXzs4p3U4qjLfG3iIFX/Untitled?node-id=3%3A25
 
 - Desktop Hero
 
