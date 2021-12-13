@@ -56,6 +56,7 @@ update client information
 | React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
 |     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
 |  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+Rails
 
 <br>
 
@@ -69,7 +70,8 @@ update client information
 
 ![[Dummy Link](url)](https://www.figma.com/file/Dx9qXzs4p3U4qjLfG3iIFX/Untitled?node-id=3%3A25)
 
-- Desktop Hero
+- Componenet Tree
+  (https://whimsical.com/lilbutler-PMrdqv6Hqg6q4yz9aKSPh2)
 
 - Resource Index
 
@@ -100,6 +102,7 @@ src
 |__ components/
       |__ Header.jsx
 |__ services/
+|__ screens/
 
 ```
 
