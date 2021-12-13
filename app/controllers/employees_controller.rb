@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: [:show, :update, :destroy]
+  before_action :set_employee, only: %i[show update destroy]
 
   # GET /employees
   def index
@@ -18,7 +18,11 @@ class EmployeesController < ApplicationController
     @employee = Employee.new(employee_params)
 
     if @employee.save
-      render json: @employee, status: :created, location: @employee
+      @token = encode({ id: @employee.id })
+      render json: {
+        employee: @employee.attributes.except('password_digest'),
+        token: @token
+      }, status: :created
     else
       render json: @employee.errors, status: :unprocessable_entity
     end
@@ -39,13 +43,14 @@ class EmployeesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_employee
-      @employee = Employee.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def employee_params
-      params.require(:employee).permit(:email, :employee_id, :password_digest)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_employee
+    @employee = Employee.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def employee_params
+    params.require(:employee).permit(:email, :employee_id, :password)
+  end
 end
