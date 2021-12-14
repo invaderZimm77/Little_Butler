@@ -1,13 +1,6 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: %i[show update destroy]
 
-  # GET /employees
-  def index
-    @employees = Employee.all
-
-    render json: @employees
-  end
-
   # GET /employees/1
   def show
     render json: @employee
@@ -26,20 +19,6 @@ class EmployeesController < ApplicationController
     else
       render json: @employee.errors, status: :unprocessable_entity
     end
-  end
-
-  # PATCH/PUT /employees/1
-  def update
-    if @employee.update(employee_params)
-      render json: @employee
-    else
-      render json: @employee.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /employees/1
-  def destroy
-    @employee.destroy
   end
 
   private
