@@ -10,11 +10,11 @@ export default function login() {
 	const handleChange = (e) => {
 
 		const {employee_id, value} = e.target;
-		setFormData(prevState+> ({
+		setFormData((prevState) => ({
 			...prevState,
-			[employee_id]: value
-		}))
-	}
+			[employee_id]: value,
+		}));
+	};
 	return (
 		<form>
 			<label>Employee ID: 
