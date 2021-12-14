@@ -24,20 +24,6 @@ class NotesController < ApplicationController
     end
   end
 
-  # # PATCH/PUT /notes/1
-  # def update
-  #   if @note.update(note_params)
-  #     render json: @note
-  #   else
-  #     render json: @note.errors, status: :unprocessable_entity
-  #   end
-  # end
-
-  # # DELETE /notes/1
-  # def destroy
-  #   @note.destroy
-  # end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
