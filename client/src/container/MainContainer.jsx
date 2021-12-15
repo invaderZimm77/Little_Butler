@@ -62,6 +62,7 @@ export default function MainContainer({ currentEmployee }) {
           <ClientEdit
             clients={clients}
             handleClientUpdate={handleClientUpdate}
+            currentEmployee={currentEmployee}
           />
         </Route>
         <Route path="/clients/new">
