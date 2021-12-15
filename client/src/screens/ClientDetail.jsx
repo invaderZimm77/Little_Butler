@@ -29,33 +29,50 @@ export default function ClientDetail({ notes, currentEmployee }) {
   return (
     <div>
       <h3>{client?.name}</h3>
-      {/* {client?.notes.map((note) => (
-        <p key={`list${note.id}`}>{note.name}</p>
-      ))} */}
-
-      {currentEmployee?.id === client?.employee_id && (
-        <form onSubmit={handleSubmit}>
-          {/* below is our for for the note drop down */}
-          <select onChange={handleChange} defaultValue="default">
-            {/* we can set a default value to tell people to select a note*/}
-            {/* the "defaultValue" on the <select> tag needs to match the "value" on our default <option> tag */}
-            {/* we also add the "disabled" in the <option> to prevent employees from selecting it*/}
-            <option disabled value="default">
-              -- Select a Note --
-            </option>
-            {/* now we loop over all notes and return an <option> tag for each */}
-
-            {notes.map((note) => (
-              // we track the note's id as the "value" which will get added to state onChange
-              // the note's name goes between the open and close tag which is what the employee sees
-              <option value={note.id} key={`select${note.id}`}>
-                {note.name}
-              </option>
-            ))}
-          </select>
-          <button>Add</button>
-        </form>
-      )}
+      <img src={client?.img_url} alt="Client Photo Missing" className="client-Photo"/>;
+      <h3>{client?.phone}</h3>
+	  <h4>{client?.address}</h4>
+	  
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+//---------------`-`-`-`-`-`
+// {
+//   client?.notes.map((note) => <p key={`list${note.id}`}>{note.name}</p>);
+// }
+
+// {
+//   currentEmployee?.id === client?.employee_id && (
+//     <form onSubmit={handleSubmit}>
+//       {/* below is our for for the note drop down */}
+//       <select onChange={handleChange} defaultValue="default">
+//         {/* we can set a default value to tell people to select a note*/}
+//         {/* the "defaultValue" on the <select> tag needs to match the "value" on our default <option> tag */}
+//         {/* we also add the "disabled" in the <option> to prevent employees from selecting it*/}
+//         <option disabled value="default">
+//           -- Select a Note --
+//         </option>
+//         {/* now we loop over all notes and return an <option> tag for each */}
+
+//         {notes.map((note) => (
+//           // we track the note's id as the "value" which will get added to state onChange
+//           // the note's name goes between the open and close tag which is what the employee sees
+//           <option value={note.id} key={`select${note.id}`}>
+//             {note.name}
+//           </option>
+//         ))}
+//       </select>
+//       <button>Add</button>
+//     </form>
+//   );
+// }
