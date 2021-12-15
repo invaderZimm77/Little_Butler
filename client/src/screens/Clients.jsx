@@ -22,9 +22,6 @@ export default function Clients({ clients, handleClientDelete, currentUser }) {
           )}
         </div>
       ))}
-      <Link to="/clients/new">
-        <button>Create</button>
-      </Link>
     </div>
   );
 }
