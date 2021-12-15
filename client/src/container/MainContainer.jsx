@@ -4,7 +4,12 @@ import ClientCreate from "../screens/ClientCreate";
 import ClientEdit from "../screens/ClientEdit";
 import Clients from "../screens/Clients";
 import ClientDetail from "../screens/ClientDetail";
-import { getAllClients, postClient, putClient, deleteClient } from "../services/client";
+import {
+  getAllClients,
+  postClient,
+  putClient,
+  deleteClient,
+} from "../services/client";
 import { getAllNotes } from "../services/note";
 import Notes from "../screens/Notes";
 
@@ -54,7 +59,10 @@ export default function MainContainer({ currentEmployee }) {
     <div>
       <Switch>
         <Route path="/clients/:id/edit">
-          <ClientEdit clients={clients} handleClientUpdate={handleClientUpdate} />
+          <ClientEdit
+            clients={clients}
+            handleClientUpdate={handleClientUpdate}
+          />
         </Route>
         <Route path="/clients/new">
           <ClientCreate handleClientCreate={handleClientCreate} />

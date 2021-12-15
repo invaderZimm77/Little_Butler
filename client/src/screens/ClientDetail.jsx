@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getOneClient, addNote }from "../services/client"
+import { getOneClient, addNote } from "../services/client";
 
 export default function ClientDetail({ notes, currentEmployee }) {
   const [client, setClient] = useState(null);
@@ -29,9 +29,9 @@ export default function ClientDetail({ notes, currentEmployee }) {
   return (
     <div>
       <h3>{client?.name}</h3>
-      {client?.notes.map((note) => (
+      {/* {client?.notes.map((note) => (
         <p key={`list${note.id}`}>{note.name}</p>
-      ))}
+      ))} */}
 
       {currentEmployee?.id === client?.employee_id && (
         <form onSubmit={handleSubmit}>
