@@ -24,6 +24,7 @@ export default function ClientCreate({ handleClientCreate, currentEmployee }) {
         e.preventDefault();
         handleClientCreate(formData);
       }}
+      className="client-create"
     >
       <h3>Create Client</h3>
       <label>

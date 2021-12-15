@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
+import  Footer  from "./components/Footer.jsx";
+import Header from "./components/Header"
 
 export default function Layout({ currentEmployee, handleLogout, children }) {
   return (
     <div>
-      <header>
-        <h1>Lil Butler</h1>
+      <Header/>
         {currentEmployee ? (
-          <div>
-            <p>{currentEmployee.username}</p>
+          <div className="cur-employee">
+            <p>Hello {currentEmployee.employee_id}.</p>
             <button onClick={handleLogout}>Logout</button>
           </div>
         ) : (
@@ -20,8 +21,9 @@ export default function Layout({ currentEmployee, handleLogout, children }) {
             <Link to="/clients/new">New Client</Link>
           </nav>
         )}
-      </header>
+
       {children}
+      <Footer/>
     </div>
   );
 }
