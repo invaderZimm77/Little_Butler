@@ -1,16 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Clients({ clients, handleClientDelete, currentUser }) {
+export default function Clients({
+  clients,
+  handleClientDelete,
+  currentEmployee,
+}) {
+  console.log(currentEmployee);
   return (
-    <div>
+    <div className="clients-list">
       <h3>Clients</h3>
       {clients.map((client) => (
-        <div key={client.id}>
+        <div className="client-mini-button" key={client.id}>
           <Link to={`/clients/${client.id}`}>
             <p>{client.name}</p>
           </Link>
-          {currentUser?.id === client.user_id && (
+          {currentEmployee && (
             <>
               <Link to={`/clients/${client.id}/edit`}>
                 <button>Edit</button>
