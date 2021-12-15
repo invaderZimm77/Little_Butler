@@ -16,7 +16,8 @@ export default function Layout({ currentEmployee, handleLogout, children }) {
         {currentEmployee && (
           <nav>
             <Link to='/clients'>Clients</Link>
-            <Link to='/notes'>Notes</Link>
+            <br />
+            <Link to="/clients/new">New Client</Link>
           </nav>
         )}
       </header>
