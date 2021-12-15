@@ -15,7 +15,9 @@ export default function Clients({ clients, handleClientDelete, currentUser }) {
               <Link to={`/clients/${client.id}/edit`}>
                 <button>Edit</button>
               </Link>
-              <button onClick={() => handleClientDelete(client.id)}>Delete</button>
+              <button onClick={() => handleClientDelete(client.id)}>
+                Delete
+              </button>
             </>
           )}
         </div>

@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-export default function ClientCreate({ handleClientCreate }) {
+export default function ClientCreate({ handleClientCreate, currentEmployee }) {
   const [formData, setFormData] = useState({
     name: "",
     address: "",
-    phone: "301-555-0000",
+    phone: "",
     img_url: "",
+    employee_id: currentEmployee.id,
   });
-  const { name } = formData;
+  const { name, address, phone, img_url } = formData;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,20 +35,25 @@ export default function ClientCreate({ handleClientCreate }) {
         <input
           type="text"
           name="address"
-          value={name}
+          value={address}
           onChange={handleChange}
         />
       </lable>
 
       <lable>
         Phone:
-        <input type="text" name="phone" value={name} onChange={handleChange} />
+        <input type="text" name="phone" value={phone} onChange={handleChange} />
       </lable>
       <lable>
         img URL:
-        <input type="text" name="imgURL" value={name} onChange={handleChange} />
+        <input
+          type="text"
+          name="img_url"
+          value={img_url}
+          onChange={handleChange}
+        />
       </lable>
-	  
+
       <button>Submit</button>
     </form>
   );

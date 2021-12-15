@@ -65,7 +65,10 @@ export default function MainContainer({ currentEmployee }) {
           />
         </Route>
         <Route path="/clients/new">
-          <ClientCreate handleClientCreate={handleClientCreate} />
+          <ClientCreate
+            handleClientCreate={handleClientCreate}
+            currentEmployee={currentEmployee}
+          />
         </Route>
         <Route path="/clients/:id">
           <ClientDetail notes={notes} currentEmployee={currentEmployee} />
