@@ -29,22 +29,16 @@ export default function ClientDetail({ notes, currentEmployee }) {
   return (
     <div>
       <h3>{client?.name}</h3>
-      <img src={client?.img_url} alt="Client Photo Missing" className="client-Photo"/>;
-      <h3>{client?.phone}</h3>
-	  <h4>{client?.address}</h4>
-	  
+      <img
+        src={client?.img_url}
+        alt="Client Photo Missing"
+        className="client-Photo"
+      />
+      <h3 className="phone-Num">{client?.phone}</h3>
+      <h4>{client?.address}</h4>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
 
 //---------------`-`-`-`-`-`
 // {

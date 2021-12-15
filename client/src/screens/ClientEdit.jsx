@@ -34,7 +34,7 @@ export default function ClientEdit({ clients, handleClientUpdate, currentEmploye
         e.preventDefault();
         handleClientUpdate(id, formData);
       }}
-    >
+    className="client-edit">
       <h3>Edit Client</h3>
       <label>
         Name:
