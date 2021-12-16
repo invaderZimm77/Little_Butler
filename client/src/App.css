@@ -12,23 +12,20 @@ h1 {
 .clients-list,
 .client-create,
 .client-edit,
-nav {
+
+.nav-box {
   width: auto;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-nav{
   margin-bottom: 10px;
   background-color: dimgrey;
   border-radius: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  row-gap: 30px;
+  column-gap: 30px;
   column-width: 10px;
+  
 }
 
 body {
@@ -90,7 +87,10 @@ p {
   border-radius: 5px;
   border-width: 2px;
 }
-
+.clients-list{
+  display: flex;
+  flex-direction: column;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .client-mini-tile {
@@ -100,14 +100,14 @@ p {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .client-mini-tile, nav {
+  .client-mini-tile, .nav-box {
     background-color: #ff9100;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .client-mini-tile, nav {
+  .client-mini-tile, .nav-box {
     background-color: rgb(129, 129, 129);
   }
 }
