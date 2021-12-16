@@ -20,15 +20,16 @@
 
 ## Overview
 
-_**Little_Buttler** Is an assitent for Personal Assistants LLC.\* . Track the littel things about the clients like their likes and dislikes, prefrences._
+_**Little_Buttler** Is an assitent for Personal Assistants LLC.\* . Track the little things about the clients like their likes/dislikes, prefrences. Then the other employees will be able to read those notes. A message board of sorts if you will._
 
 <br>
 
 ## MVP
 
 \_The **Little_Butler** MVP
-allow the employees to log in
-Full crud client
+- Allow the employees to log in with Authentication
+- Full CRUD on client profiles
+- 
 
 <br>
 
@@ -43,14 +44,11 @@ Full crud client
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | _Front end._                               |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
-|      Rails       |                                            |
-|      Axios       |                                            |
+|   React Router   | _React Router is a standard library for routing in React_ |
+| React SemanticUI |  |
+|      Axios       | _Library that serves to create HTTP requests_                                           |
 |      Bcrypt      | _Backend encryption_                       |
-|       JWT        | _for token based authentication_           |
+|       JWT        | _For token based authentication_           |
 
 <br>
 
@@ -65,6 +63,8 @@ https://www.figma.com/file/Dx9qXzs4p3U4qjLfG3iIFX/Untitled?node-id=3%3A25
 #### Component Tree
 
 [Component Tree Sample](https://whimsical.com/lilbutler-PMrdqv6Hqg6q4yz9aKSPh2)
+
+<br>
 
 #### Component Architecture
 
@@ -91,11 +91,10 @@ src
 |__App.js
 |__App.css
 |__Layout.jsx
+
 ```
 
 #### Time Estimates
-
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                      | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -110,7 +109,7 @@ src
 
 #### ERD Model
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+
 ![image](ERD_sample.png)
 <br>
 
@@ -118,8 +117,8 @@ src
 
 ## Post-MVP
 
--be able to add notes to client pages
--extensive styling
+- Allow employees to add notes to client pages
+- extensive styling
 
 ---
 
@@ -131,5 +130,6 @@ export default function ClientEdit({ clients, handleClientUpdate, currentEmploye
 
 ## Code Issues & Resolutions
 
-Misplaces S and missing ones
-misnamed varibles
+Misplaced Ss and misnamed varibles
+
+SEMICOLON!!!!!! placement
