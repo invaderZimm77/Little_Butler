@@ -11,7 +11,7 @@ export default function Clients({
     <div className="clients-list">
       <h3>Clients</h3>
       {clients.map((client) => (
-        <div className="client-mini-button" key={client.id}>
+        <div className="client-mini-tile" key={client.id}>
           <Link to={`/clients/${client.id}`}>
             <p>{client.name}</p>
           </Link>
