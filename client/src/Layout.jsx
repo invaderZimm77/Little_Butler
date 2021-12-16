@@ -12,7 +12,7 @@ export default function Layout({ currentEmployee, handleLogout, children }) {
             <button onClick={handleLogout}>Logout</button>
           </div>
         ) : (
-          <Link to='/login'>Login/Register</Link>
+          <Link to='/login'>Login</Link>
         )}
         {currentEmployee && (
           <nav>
