@@ -1,20 +1,20 @@
 # Little_Butler
 
 - [Little_Butler](#little_butler)
-  - [Overview](#overview)
-  - [MVP](#mvp)
-    - [Goals](#goals)
-    - [Libraries and Dependencies](#libraries-and-dependencies)
-    - [Client (Front End)](#client-front-end)
-      - [Wireframes](#wireframes)
-      - [Component Tree](#component-tree)
-      - [Component Architecture](#component-architecture)
-      - [Time Estimates](#time-estimates)
-    - [Server (Back End)](#server-back-end)
-      - [ERD Model](#erd-model)
-  - [Post-MVP](#post-mvp)
-  - [Code Showcase](#code-showcase)
-  - [Code Issues & Resolutions](#code-issues--resolutions)
+	- [Overview](#overview)
+	- [MVP](#mvp)
+		- [Goals](#goals)
+		- [Libraries and Dependencies](#libraries-and-dependencies)
+		- [Client (Front End)](#client-front-end)
+			- [Wireframes](#wireframes)
+			- [Component Tree](#component-tree)
+			- [Component Architecture](#component-architecture)
+			- [Time Estimates](#time-estimates)
+		- [Server (Back End)](#server-back-end)
+			- [ERD Model](#erd-model)
+	- [Post-MVP](#post-mvp)
+	- [Code Showcase](#code-showcase)
+	- [Code Issues & Resolutions](#code-issues--resolutions)
 
 <br>
 
@@ -28,10 +28,7 @@ _**Little_Buttler** Is an assitent for Personal Assistants LLC.\* . Track the li
 
 \_The **Little_Butler** MVP
 allow the employees to log in
-create new clients
-
-add notes to client files
-update client information
+Full crud client
 
 <br>
 
@@ -43,17 +40,17 @@ update client information
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _Front end._                               |
 |   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
 | React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
 |     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
 |  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
-|      Rails       |
-|      Axios       |
+|      Rails       |                                            |
+|      Axios       |                                            |
+|      Bcrypt      | _Backend encryption_                       |
+|       JWT        | _for token based authentication_           |
 
 <br>
 
@@ -74,7 +71,6 @@ https://www.figma.com/file/Dx9qXzs4p3U4qjLfG3iIFX/Untitled?node-id=3%3A25
 ```structure
 
 src
-|__ assets/
 |__ components/
 	  |__ Footer.jsx
       |__ Header.jsx
@@ -104,10 +100,9 @@ src
 | Task                      | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Backend                   |    H     |     3 hrs      |     2 hrs     |    8 hrs    |
-| Frontend Crud Connections |    H     |     3 hrs      |     1 hrs     |      4  hrs    |
-| TOTAL                     |          |     32hrs      |    21 hrs     |     28 hrs     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| Frontend Crud Connections |    H     |     3 hrs      |     1 hrs     |    8 hrs    |
+| auth                      |    L     |      2hr       |     8 hr      |     8hr     |
+| TOTAL                     |          |     24hrs      |    21 hrs     |   24 hrs    |
 
 <br>
 
@@ -115,26 +110,26 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
 [ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+![image](ERD_sample.png)
 <br>
 
 ---
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+-be able to add notes to client pages
+-extensive styling
 
 ---
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+```
+export default function ClientEdit({ clients, handleClientUpdate, currentEmployee}) {
+```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
-
-creating new client form(img url?)
-addrees of client on client creant. fuul
+Misplaces S and missing ones
+misnamed varibles
