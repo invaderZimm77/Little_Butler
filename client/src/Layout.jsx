@@ -15,11 +15,11 @@ export default function Layout({ currentEmployee, handleLogout, children }) {
           <Link to='/login'>Login</Link>
         )}
         {currentEmployee && (
-          <nav>
+          <div className="nav-box">
             <Link to='/clients'>Clients</Link>
             <br />
             <Link to="/clients/new">New Client</Link>
-          </nav>
+          </div>
         )}
 
       {children}
