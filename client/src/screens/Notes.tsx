@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function Notes({ notes }) {
+export default function Notes({notes,}: {notes?: { id: number; note: string }[];
+}) {
   return (
     <div>
       <h3>Notes</h3>
-      {notes.map((note) => (
+      {notes?.map((note) => (
         <p key={note.id}>{note.note}</p>
       ))}
     </div>

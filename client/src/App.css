@@ -12,7 +12,6 @@ h1 {
 .clients-list,
 .client-create,
 .client-edit,
-
 .nav-box {
   width: auto;
   text-align: center;
@@ -25,7 +24,6 @@ h1 {
   border-radius: 15px;
   column-gap: 30px;
   column-width: 10px;
-  
 }
 
 body {
@@ -87,7 +85,7 @@ p {
   border-radius: 5px;
   border-width: 2px;
 }
-.clients-list{
+.clients-list {
   display: flex;
   flex-direction: column;
 }
@@ -100,14 +98,16 @@ p {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .client-mini-tile, .nav-box {
+  .client-mini-tile,
+  .nav-box {
     background-color: #ff9100;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .client-mini-tile, .nav-box {
+  .client-mini-tile,
+  .nav-box {
     background-color: rgb(129, 129, 129);
   }
 }

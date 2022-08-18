@@ -1,16 +1,33 @@
+import React, { ChangeEvent } from "react";
 import { useState } from "react";
 
-export default function ClientCreate({ handleClientCreate, currentEmployee }) {
-  const [formData, setFormData] = useState({
+interface myData {
+  name: string;
+  address: string;
+  phone: string;
+  img_url: string;
+  employee_id: string;
+  notes?: { id: number; note: string }[];
+}
+
+export default function ClientCreate({
+  handleClientCreate,
+  currentEmployee,
+}: {
+  handleClientCreate: (formData: myData) => void;
+  currentEmployee: any;
+}) {
+  const [formData, setFormData] = useState<myData>({
     name: "",
     address: "",
     phone: "",
     img_url: "",
+    notes:[],
     employee_id: currentEmployee.id,
   });
   const { name, address, phone, img_url } = formData;
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
@@ -31,7 +48,7 @@ export default function ClientCreate({ handleClientCreate, currentEmployee }) {
         Name:
         <input type="text" name="name" value={name} onChange={handleChange} />
       </label>
-      <lable>
+      <label>
         Address:
         <input
           type="text"
@@ -39,13 +56,13 @@ export default function ClientCreate({ handleClientCreate, currentEmployee }) {
           value={address}
           onChange={handleChange}
         />
-      </lable>
+      </label>
 
-      <lable>
+      <label>
         Phone:
         <input type="text" name="phone" value={phone} onChange={handleChange} />
-      </lable>
-      <lable>
+      </label>
+      <label>
         img URL:
         <input
           type="text"
@@ -53,7 +70,7 @@ export default function ClientCreate({ handleClientCreate, currentEmployee }) {
           value={img_url}
           onChange={handleChange}
         />
-      </lable>
+      </label>
 
       <button>Submit</button>
     </form>

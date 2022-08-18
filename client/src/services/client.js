@@ -26,6 +26,6 @@ export const deleteClient = async (id) => {
 
 export const addNote = async (idData) => {
   const resp ="note added" 
-//   await api.post("/clients/notes", { client: idData });
-  return resp;//.data;
+  await api.post("/clients/notes", { client: idData });
+  return resp.data;
 };
