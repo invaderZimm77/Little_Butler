@@ -2,27 +2,30 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getOneClient, addNote } from "../services/client";
 
-export default function ClientDetail({ notes, currentEmployee }) {
+export default function ClientDetail(
+  { notes }: { notes?: { id: number; note: string }[] },
+  { currentEmployee }: { currentEmployee: string }
+) {
   const [client, setClient] = useState(null);
   const [noteId, setNoteId] = useState("");
-  const { id } = useParams();
+  const { clientIdNum } = useParams();
 
   useEffect(() => {
     const fetchClient = async () => {
-      const clientItem = await getOneClient(id);
+      const clientItem = await getOneClient(clientIdNum);
       setClient(clientItem);
     };
     fetchClient();
-  }, [id]);
+  }, [clientIdNum]);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { value } = e.target;
     setNoteId(value);
   };
   // handle submit for adding the note to a client
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const newNotes = await addNote({ note_id: noteId, client_id: id });
+    const newNotes = await addNote({ note_id: noteId, client_id: clientIdNum });
     setClient((prevState) => ({ ...prevState, notes: newNotes }));
   };
 
@@ -59,7 +62,7 @@ export default function ClientDetail({ notes, currentEmployee }) {
 
   return (
     <div>
-      <h3>{client?.name}</h3>
+      <h3>{client.name}</h3>
       <img
         src={client?.img_url}
         alt="Client Photo Missing"

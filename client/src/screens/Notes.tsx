@@ -1,7 +1,10 @@
 import React from "react";
 
-export default function Notes({notes,}: {notes?: { id: number; note: string }[];
-}) {
+//a function called Notes that takes an object of notes of the type notes
+//which is comprised of objects made of an id type number & note type string that is an array
+
+export default function Notes({notes,}: {notes?: { id: number; note: string }[];}) {
+ 
   return (
     <div>
       <h3>Notes</h3>
